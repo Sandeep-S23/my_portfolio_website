@@ -1,0 +1,38 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+    {% block content %}
+    	<section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+	        <div class="container">
+	            <div class="row">
+	                
+	                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+	                    <div class="about-text">
+	                        <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+	                        <h1 class="animated animated-text">
+	                            <span class="mr-2">Hey folks, I'm</span>
+	                                <div class="animated-info">
+	                                    <span class="animated-item">Sandeep</span>
+	                                    <span class="animated-item">Web Developer</span>
+	                                    <!-- <span class="animated-item">UI Specialist</span> -->
+	                                </div>
+	                        </h1>
+
+	                        <p>I am a Software Engineer and web developer based in Bangalore. I love building website using Python Django. Take a look at my <a href="https://github.com/Sandeep-S23" target="_blank">GitHub</a> account.</p>
+	                        
+	                        <div class="custom-btn-group mt-4">
+	                          <a href="{% static 'portfolio/Sandeep_CV_updated.pdf' %}" class="btn mr-lg-2 custom-btn" target="_blank"><i class='uil uil-file-alt'></i> Download CV</a>
+	                          <a href="{% url 'contact' %}" class="btn custom-btn custom-btn-bg custom-btn-link">Get in touch</a>
+	                        </div>
+	                    </div>
+	                </div>
+
+	                <div class="col-lg-5 col-md-12 col-12">
+	                    <div class="about-image svg">
+	                        <img src="{% static 'portfolio/images/work-home.png' %}" class="img-fluid" alt="svg image">
+	                    </div>
+	                </div>
+
+	            </div>
+	        </div>
+	    </section>
+    {% endblock content %}

@@ -1,0 +1,22 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+    {% block content %}
+    	<div class="container">
+    		<h2 align="center" class="mt-3">{{ project.title }}</h2>
+    		<br>
+	    	<img src="{{ project.image.url }}" align="center" class="img-fluid" alt="project image">
+	    	<br>
+	    	<h3 align="center" class="mt-3">About this project</h3>
+	    	{{ project.description|safe }}
+	    	<h3 align="center" class="mt-3">Packages used</h3>
+	    	<center>
+	    		<ul>
+		    		{{ project.techno|safe }}
+		    	</ul>
+	    	</center>
+	    	<br>
+	    	<div class="text-center">
+	    		<a href="{{ project.githublink }}" class="btn btn-outline-primary align" target="_blank">Git Hub</a>
+	    	</div>
+    	</div>
+    {% endblock content %}
